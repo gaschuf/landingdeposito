@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700,300);
+img {max-width:100%;}
+header, footer{background:#224962; color:#FFF; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;  padding-top:12px; }
+.slogan {text-align: center; }
+
+.logo img {height:70px; margin-top:5px; }
+.slogan h1{color:#FFF; font-weight: 400; line-height:75px; }
+.slogan2 { padding:15px;}
+.slogan2 h2{text-align:left; }
+.products article {/* padding:10px; */ }
+.products article > div > div {text-align:left}
+.products .grid_3 {margin:0; padding:5px;}
+.breadcrumbs {margin-bottom:30px !important}
+.breadcrumbs h2 {color: #FFF; font-weight: 700; text-align: center; background: #C13E74; padding: 5px 15px; display:inline-block; margin-right:10px; font-size:15px; line-height:normal;}
+
+.form {background:#224962; padding:10px; }
+.form h1 {font-size:36px; color:#FFF; font-weight:700; text-align:center; background:#C13E74; padding:10px 0;}
+.form h2 {color:#FFF;}
+.form p {font-size:16px; color:#FFF;}
+.error {color:#900;}
+
+ .ver {
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 2px;
+	display: inline-block;
+	background: #9D315C;
+	color: #fff;
+}
+.ver:hover {
+	background:#C13E74;
+}
+.producto h2 {color:#C13E74; font-size: 30px;}
+.description p { max-width:100%;  word-wrap: break-word;}
+
+@media only screen and (max-width: 767px) {
+.logo {text-align:center;}
+.grid_8 {overflow: hidden;}
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.slogan h1{line-height:40px;}
+}
+
