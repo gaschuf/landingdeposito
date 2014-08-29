@@ -20,7 +20,6 @@ echo '<section class="row"><div class="grid_4">&nbsp;</div><div class="grid_8"><
 // nuevo
 if(isset($_POST['insert']))  {
 
-include 'multipleupload/procesarArchivos.php'; 
 
 if (!$db_selected) { 
 die ('Cant use tarea : ' . mysql_error()); 
@@ -33,16 +32,8 @@ $subtitulo = $_POST['subtitulo'];
 $descripcion = $_POST['descripcion']; 
 $habilitado = $_POST['habilitado']; 
 $idcategoria = $_POST['selectcategoria']; 
+$fotos = $_POST['imagen']; 
 
-
-//PROCESA EL MULTIPLEUPLOAD Y DEVUELVE	
-if (isset($filesUploaded) and !empty($filesUploaded)) {
-	
-//ASIGNO CADA FOTO A UN ARRAY	
-	$fotos = array();
-	foreach($filesUploaded as $foto) {
- 	$fotos[] = $foto;
-	}
 
 //SERIALIZO EL ARRAy PARA GUARDARLO EN LA BASE e inserto los datos
     $singleFile = serialize($fotos);
@@ -51,7 +42,7 @@ if (isset($filesUploaded) and !empty($filesUploaded)) {
 	$insfamilia.= "VALUES ('".$nombre."', '".$subtitulo."', '".$descripcion."', '".$singleFile."', '".$habilitado."' , '".$idcategoria."') "; 
 	 $res = mysql_query($insfamilia, $connect) or die(mysql_error()); 
 
-}
+
 
 
 echo '<section class="row"><div class="grid_4">&nbsp;</div><div class="grid_8"><h1 style="text-align:right;">Producto Agregado		 Correctamente</h1></div></section>';
@@ -73,48 +64,13 @@ $subtitulo = $_POST['subtitulo'];
 $descripcion = $_POST['descripcion']; 
 $habilitado = $_POST['habilitado']; 
 $idcategoria = $_POST['selectcategoria']; 
-$oldfotos = array();
-$oldfotos = $_POST['oldimagen']; 
+$fotos = $_POST['imagen']; 
 
 
-//funciona el update sin agregar imagenes.... si agrego no anda pero si borro img o cambio algun campo si anda
-//funciona el update sin agregar imagenes.... si agrego no anda pero si borro img o cambio algun campo si anda
-//funciona el update sin agregar imagenes.... si agrego no anda pero si borro img o cambio algun campo si anda
-//funciona el update sin agregar imagenes.... si agrego no anda pero si borro img o cambio algun campo si anda
-
-// si agrego una img lo hago entrar al if traigfo el upload y uno los arrays de nueva y vieja fotos
-
-
-if ( isset($_POST['imagen'])) {
-
-		die();
-	include 'multipleupload/procesarArchivos.php'; 
-	//PROCESA EL MULTIPLEUPLOAD Y DEVUELVE	
-	if (isset($filesUploaded) and !empty($filesUploaded)) {
+//SERIALIZO EL ARRAy PARA GUARDARLO EN LA BASE e inserto los datos
+  $singleFile = serialize($fotos);
 		
-	//ASIGNO CADA FOTO A UN ARRAY	
-		$fotos = array();
-		foreach($filesUploaded as $foto) {
-		$fotos[] = $foto;
-		}
-		
-		
-		// si subio fotos nuevas uno array de fotos viejas con fotos nuevas	
-		$updatefotos = array_merge($fotos, $oldfotos);
-		
-		//SERIALIZO EL ARRAy  de fotos PARA GUARDARLO EN LA BASE e inserto los datos
-		$singleFile = array();
-		$singleFile = serialize($updatefotos);
-		
-	}
-	}
- else {
-// sino subio fotos  nuevas  oldfotos me trae las que habia y las serializo
 
-$singleFile = array();
-    $singleFile = serialize($oldfotos);
-
-}
 
 	$update = "UPDATE  productos  set nombre = '".$nombre."', subtitulo = '".$subtitulo."', descripcion = '".$descripcion."', image = '".$singleFile."', enable = '".$habilitado."', idcategoria = '".$idcategoria."' WHERE id='".$id."'" ;
     $res = mysql_query($update, $connect) or die(mysql_error()); 
@@ -168,7 +124,7 @@ echo '<section class="row"><div class="grid_4">&nbsp;</div><div class="grid_8"><
 		$fotos = unserialize( $rowproductos[image]);
 		foreach ($fotos as $key => $fotO) 
 		{ 
-			echo '<img width="50px" height="30px" src="../img/uploads/productos/'.$fotO.'"><br />'; 
+			echo '<img width="50px" height="30px" src="../img/uploads/'.$fotO.'"><br />'; 
 		}
 		echo'
         </strong></td>

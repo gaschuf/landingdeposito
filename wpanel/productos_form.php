@@ -1,4 +1,17 @@
+<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
 
+	<script type="text/javascript">
+	jQuery(document).ready(function ($) {
+      $('.iframe').fancybox({
+			  'width'	: 880,
+			  'height'	: 770,
+			  'type'	: 'iframe',
+			  'autoScale'   : false
+      });
+		});
+	</script>
 <? 
 include '../includes/conn.php'; 
 $categorias = mysql_query ("select * from categorias", $connect);
@@ -50,7 +63,7 @@ if(isset($_GET['ID']))  {
             
 				<? foreach ($fotos as $key => $foto) 
             { 
-               echo '<div  id="'.$key.'"><img src="../img/uploads/productos/'.$foto.'" style="width:100px; " /><input type="hidden" name="oldimagen[]"   value="'.$foto.'" > <button type="button"  style="float:none" value="'.$key.'" id class="imageClear">Borrar Imagen</button></div>'; 
+               echo '<div  id="'.$key.'"><img src="../img/uploads/'.$foto.'" style="width:100px; " /><input type="hidden" name="imagen[]"   value="'.$foto.'" > <button type="button"  style="float:none" value="'.$key.'" id class="imageClear">Borrar Imagen</button></div>'; 
             } ?>
    			 
              <script>
@@ -143,7 +156,8 @@ if(isset($_GET['ID']))  {
               <fieldset> 
             <label for="imagen">Imagen</label>
              <div id="InputsWrapper">
-   			 <input id="imagen" name="imagen[]" size="30" type="file"  required />
+                <input  type="text" name="imagen[]" id="img_0" value="" required>
+                <a href="filemanager/dialog.php?type=1&field_id=img_0&fldr=productos" class="btn small iframe" type="button">Buscar...</a>
              </div>
              <a href="#" id="AddButton" class="btn blue small">Agregar  Otra Imagen</a>
               </fieldset>
@@ -183,7 +197,7 @@ $(AddButton).click(function (e)  //on add input button click
         {
             FieldCount++; //text box added increment
             //add input box
-            $(InputsWrapper).append('<div><input type="file" name="imagen[]" id="imagen_'+ FieldCount +'"  /><a href="#" class="removeclass">&times;</a></div>');
+            $(InputsWrapper).append('<div><input type="text" name="imagen[]" id="img_'+ FieldCount +'"  /><a href="filemanager/dialog.php?type=1&field_id=img_'+ FieldCount +'&fldr=productos" class="btn small iframe" type="button">Buscar...</a><a href="#" class="removeclass">&times;</a></div>');
             x++; //text box increment
         }
 return false;

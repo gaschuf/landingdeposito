@@ -24,7 +24,11 @@ header {margin-bottom: 20px !important;}
 .form p {font-size:16px; color:#FFF;}
 .error {color:#900;}
 
-#formFamilias input[type="text"], #formFamilias input[type="file"]     { width:100% }
+#formFamilias input[type="text"]   { width:100% }
+#formFamilias input[name="imagen[]"]  { width:50% !important; display: inline-block;
+		margin-right: 20px;
+		vertical-align: middle;}
+#InputsWrapper {margin-bottom:20px;}
 
  .ver {
 	text-align: center;

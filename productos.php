@@ -34,7 +34,7 @@ $nombrecategoria = $_GET["nombrecategoria"];
 								<? foreach ($fotos as $key => $foto) 
 								{ 
 									if ($key == 0) {
-										echo '<img src="img/uploads/productos/'.$foto.'" alt="Imagen '.$foto.'">';
+										echo '<img src="img/uploads/'.$foto.'" alt="Imagen '.$foto.'">';
 									}
 									
 								}?> 

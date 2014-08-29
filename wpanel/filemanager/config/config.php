@@ -19,13 +19,14 @@ mb_internal_encoding('UTF-8');
 //    |   |   |   |- responsivefilemanager
 //    |   |   |   |   |- plugin.min.js
 
-$base_url =
+$base_url ="";
    // Get HTTP/HTTPS
-   ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http').
-   '://'.
+//   ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http').
+ //  '://'.
    // Get domain portion
-   $_SERVER['HTTP_HOST']; // DON'T TOUCH (base url (only domain) of site (without final /)).
-$upload_dir = '/landingDeposito/img/uploads/'; // path from base_url to base of upload folder (with start and final /)
+//   $_SERVER['HTTP_HOST']; // DON'T TOUCH (base url (only domain) of site (without final /)).
+//$upload_dir = '/landingDeposito/img/uploads/'; // path from base_url to base of upload folder (with start and final /)
+$upload_dir = ''; // path from base_url to base of upload folder (with start and final /)
 $current_path = '../../img/uploads/'; // relative path from filemanager folder to upload folder (with final /)
 //thumbs folder can't put inside upload folder
 $thumbs_base_path = '../../img/uploads/thumbs/'; // relative path from filemanager folder to thumbs folder (with final /)
@@ -64,7 +65,7 @@ if ((int)(ini_get('post_max_size')) < $MaxSizeUpload){
 	$MaxSizeUpload = (int)(ini_get('post_max_size'));
 }
 
-$default_language 	= "en_EN"; //default language file name
+$default_language 	= "es"; //default language file name
 $icon_theme 		= "ico"; //ico or ico_dark you can cusatomize just putting a folder inside filemanager/img
 $show_folder_size 	= TRUE; //Show or not show folder size in list view feature in filemanager (is possible, if there is a large folder, to greatly increase the calculations)
 $show_sorting_bar 	= TRUE; //Show or not show sorting feature in filemanager
@@ -120,7 +121,7 @@ $chmod_files 	 	  = FALSE; // change file permissions
 $chmod_dirs		 	  = FALSE; // change folder permissions
 $preview_text_files = TRUE; // eg.: txt, log etc.
 $edit_text_files 	  = TRUE; // eg.: txt, log etc.
-$create_text_files 	= TRUE; // only create files with exts. defined in $editable_text_file_exts
+$create_text_files 	= FALSE; // only create files with exts. defined in $editable_text_file_exts
 
 // you can preview these type of files if $preview_text_files is true
 $previewable_text_file_exts = array('txt', 'log', 'xml');

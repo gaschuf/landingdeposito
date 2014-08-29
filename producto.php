@@ -137,7 +137,7 @@ $idfamilia = $_GET["idfamilia"];
 								<div id="carousel">
                                 	<? foreach ($fotos as $key => $foto) 
 											{  ?>  
-                                				<span id="<?=$key ?>"><a href="img/uploads/productos/<?=$foto ?>" class="popimage"><img src="img/uploads/productos/<?=$foto ?>" /></a></span>
+                                				<span id="<?=$key ?>"><a href="img/uploads/<?=$foto ?>" class="popimage"><img src="img/uploads/<?=$foto ?>" /></a></span>
 									
 									<? } ?>
 									
@@ -151,7 +151,7 @@ $idfamilia = $_GET["idfamilia"];
 							<div id="thumbs-wrapper">
 								<div id="thumbs">
                                 	<? foreach ($fotos as $key => $foto){  ?>  
-                                				<a href="#<?=$key ?>"><img src="img/uploads/productos/<?=$foto ?>" /></a>
+                                				<a href="#<?=$key ?>"><img src="img/uploads/<?=$foto ?>" /></a>
 									
 							 		<? } ?>
 									
