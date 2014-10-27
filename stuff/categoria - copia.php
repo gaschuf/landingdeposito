@@ -17,7 +17,7 @@ $nombrefamilia = $_GET["nombrefamilia"];
 <section class="row products">
   <div class="grid_8">
 		<div class="row breadcrumbs" style="display:block"> 
-		<a href="index.php"><h2>HOME ></h2></a><h2><?= $nombrefamilia ?></h2>
+		<a href="familias.php"><h2>HOME ></h2></a><h2><?= $nombrefamilia ?></h2>
 		</div>
         <div class="row"> 
 			<? while ($row = mysql_fetch_array ($categoria))	
@@ -26,12 +26,12 @@ $nombrefamilia = $_GET["nombrefamilia"];
 				 <article class="grid_3">
 				 			<h3>'.$row[nombre].'</h3>	
 				 		  <div class="view view-first">
-								<!--<a href="productos.php?idcategoria='.$row[id].'&nombrefamilia='.$nombrefamilia.'&nombrecategoria='.$row[nombre].'&idfamilia='.$idfamilia.'">-->
+								<a href="productos.php?idcategoria='.$row[id].'&nombrefamilia='.$nombrefamilia.'&nombrecategoria='.$row[nombre].'&idfamilia='.$idfamilia.'">
 								<img src="img/uploads/categorias/'.$row[image].'" alt="Imagen '.$row[nombre].'">
 								<div class="mask">
 									<!--<h2>Hover Style #1</h2>-->
 									<p>'.$row[descripcion].'</p>
-									<!--<span class="ver">+ VER</span>-->
+									<span class="ver">+ VER</span>
 								</div>
 								</a>
 						</div>

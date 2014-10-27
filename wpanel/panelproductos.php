@@ -14,7 +14,11 @@ $delete = "DELETE  from productos WHERE id='".$id."'";
 
 $res = mysql_query($delete, $connect) or die(mysql_error()); 
 
-echo '<section class="row"><div class="grid_4">&nbsp;</div><div class="grid_8"><h1 style="text-align:right;">Producto Eliminado Correctamente</h1></div></section>';
+ ?>
+
+<section class="row"><div class="grid_4">&nbsp;</div><div class="grid_8"><h1 style="text-align:right;">Producto Eliminado Correctamente</h1></div></section>
+
+<? ;
 } else
 
 // nuevo
@@ -39,7 +43,12 @@ $fotos = $_POST['imagen'];
     $singleFile = serialize($fotos);
 	
 	 $insfamilia = "INSERT INTO productos (nombre, subtitulo, descripcion, image, enable, idcategoria) "; 
-	$insfamilia.= "VALUES ('".$nombre."', '".$subtitulo."', '".$descripcion."', '".$singleFile."', '".$habilitado."' , '".$idcategoria."') "; 
+	$insfamilia.= "VALUES ('$nombre', '$subtitulo', '$descripcion', '$singleFile', '$habilitado' , '$idcategoria') "; 
+	 $insfamilia = <<< SQL
+				 	INSERT INTO productos (nombre, subtitulo, descripcion, image, enable, idcategoria)
+					VALUES ('$nombre', '$subtitulo', '$descripcion', '$singleFile', '$habilitado' , '$idcategoria')
+SQL;
+
 	 $res = mysql_query($insfamilia, $connect) or die(mysql_error()); 
 
 

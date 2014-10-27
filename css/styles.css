@@ -3,7 +3,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,700,300);
 img {max-width:100%;}
-header, footer{background:#224962; color:#FFF; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;  padding-top:12px; }
+header, footer {background:#224962; color:#FFF; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;  padding-top:12px; }
 .slogan {text-align: center; }
 
 .logo img {height:70px; margin-top:5px; }
@@ -35,10 +35,19 @@ header, footer{background:#224962; color:#FFF; box-sizing:border-box; -webkit-bo
 }
 .producto h2 {color:#C13E74; font-size: 30px;}
 .description p { max-width:100%;  word-wrap: break-word;}
-
+.sent { background: #fff;
+padding: 20px;
+margin-bottom: 10px !important;
+font-weight: bold;
+}
+.red { background: #C00;
+color:#FFF;
+}
 @media only screen and (max-width: 767px) {
 .logo {text-align:center;}
 .grid_8 {overflow: hidden;}
+.grid_3 {overflow: hidden;}
+
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 .slogan h1{line-height:40px;}

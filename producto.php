@@ -120,7 +120,7 @@ $idfamilia = $_GET["idfamilia"];
 <section class="row products">
   <div class="grid_8">
 	<div class="row breadcrumbs" style="display:block"> 
-		<a href="familias.php"><h2>HOME ></h2></a><a href="categoria.php?idfamilia=<?=$idfamilia?>&idcategoria=<?=$idcategoria?>&nombrefamilia=<?=$nombrefamilia ?>"><h2><?= $nombrefamilia ?>  ></h2></a><a href="productos.php?idfamilia=<?=$idfamilia?>&idcategoria=<?=$idcategoria?>&nombrefamilia=<?=$nombrefamilia ?>&nombrecategoria=<?=$nombrecategoria ?>"><h2><?= $nombrecategoria ?> ></h2></a>
+		<a href="index.php"><h2>HOME ></h2></a><a href="categoria.php?idfamilia=<?=$idfamilia?>&idcategoria=<?=$idcategoria?>&nombrefamilia=<?=$nombrefamilia ?>"><h2><?= $nombrefamilia ?>  ></h2></a><a href="productos.php?idfamilia=<?=$idfamilia?>&idcategoria=<?=$idcategoria?>&nombrefamilia=<?=$nombrefamilia ?>&nombrecategoria=<?=$nombrecategoria ?>"><h2><?= $nombrecategoria ?> ></h2></a>
 		</div>
         <article class="row producto"> 
 			<? while ($row = mysql_fetch_array ($producto)) {

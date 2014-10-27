@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Deposito Norte Equipamiento para estudios</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Audio Video e Iluminación  Profesional para CATV & Estudios</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<!--[if lt IE 9]>
@@ -55,6 +55,15 @@
         </div>
 </header>
 <section class="row grid-highlight">
-    <article class="grid_12 slogan2"><img src="img/greenscreen.jpg" width="35%" align="left" style="margin: 0 20px 20px 0" alt="Equipamiento para estudios de TV">
-    <h2>Audio, Video, e Iluminación Profesional</h2><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p></article>
+    <article class="grid_12 slogan2" style="background:url(img/TV-studio-adjusted.jpg); background-size:cover; color:#FFF;  min-height: 350px; position:relative">
+    <h1 style="color:#FFF; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); background-color: rgba(193,62,116,0.8); padding:10px; display:inline-block;">Soluciones en Audio, Video, e Iluminación Profesional</h1><!--<p style="background-color: rgba(0,0,0,0.8); padding:15px;">Somos una empresa que está acompañando el crecimiento de las telecomunicaciones y en especial la televisión por cable desde el año 1990.
+
+Desde 2012 afincados én Salta y desde allí atendemos todo el norte argentino.
+
+Proveemos equipamiento profesional en audio video e iluminacion, insumos, cables, fibra óptica, amplificadores, conectores, como así también laboratorio y nuestro servicio incluye obras llave en mano, tendido de fibra y puesta en marcha de red.
+
+Nuestro éxito se debe al gran respaldo y a la alianza establecida con nuestros proveedores que nos permiten la permanente actualización de productos y/o sistemas.</p>-->
+<h2 style=" text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); right:20px; color:#C13E74 !important; background-color: rgba(255,255,255,0.8); padding:10px; display: inline-block !important;  position:absolute; bottom: 30px">Atendemos a Productoras, Canales de Televisión, Profesionales y  Operadoras.</h2>
+</article>
+
 </section>

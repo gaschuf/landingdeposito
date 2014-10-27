@@ -26,7 +26,7 @@ if(isset($_GET['ID']))  {
             <label for="imagen">Imagen</label><br />
    			 <img src="../img/uploads/familias/<?=$data[image] ?>" style="width:100px;" />
 			 <input type="hidden" name="img"  id="img" value="<?=$data[image] ?>" >
-			 <input id="newimage" name="newimage" size="30" type="file" accept="image/gif, image/jpg, image/png"  />
+			 <input id="newimage" name="newimage" size="30" type="file"   />
               </fieldset>
            
               <fieldset>
@@ -76,7 +76,7 @@ if(isset($_GET['ID']))  {
             </fieldset>
               <fieldset> 
             <label for="imagen">Imagen</label>
-   			 <input id="imagen" name="imagen" size="30" type="file" accept="image/gif, image/jpg, image/png" required />
+   			 <input id="imagen" name="imagen" size="30" type="file" required />
               </fieldset>
            
               <fieldset>

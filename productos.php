@@ -18,7 +18,7 @@ $nombrecategoria = $_GET["nombrecategoria"];
 <section class="row products">
   <div class="grid_8">
 		<div class="row breadcrumbs" style="display:block"> 
-		<a href="familias.php"><h2>HOME ></h2></a><a href="categoria.php?idfamilia=<?=$idfamilia?>&nombrefamilia=<?=$nombrefamilia ?>"><h2><?= $nombrefamilia ?>  ></h2></a><h2><?= $nombrecategoria ?></h2>
+		<a href="index.php"><h2>HOME ></h2></a><a href="categoria.php?idfamilia=<?=$idfamilia?>&nombrefamilia=<?=$nombrefamilia ?>"><h2><?= $nombrefamilia ?>  ></h2></a><h2><?= $nombrecategoria ?></h2>
 		</div>
         <div class="row"> 
 			<? while ($row = mysql_fetch_array ($productos))
